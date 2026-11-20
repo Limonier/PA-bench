@@ -1,0 +1,7 @@
+.venv/
+data/
+results/
+.env
+*.local.*
+__pycache__/
+upstream/
