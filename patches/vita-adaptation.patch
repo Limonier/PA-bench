@@ -1,0 +1,34 @@
+diff --git a/src/vita/data_model/simulation.py b/src/vita/data_model/simulation.py
+index ee118a7..53121ce 100644
+--- a/src/vita/data_model/simulation.py
++++ b/src/vita/data_model/simulation.py
+@@ -400,7 +400,12 @@ class Results(BaseModel):
+         Save the results to a file.
+         """
+         with open(path, "w", encoding="utf-8") as f:
+-            f.write(self.model_dump_json(indent=4))
++            def redact(value):
++                if isinstance(value,dict):
++                    return {k:('[REDACTED]' if k.lower() in ('api_key','token','password','authorization') else redact(v)) for k,v in value.items()}
++                if isinstance(value,list): return [redact(v) for v in value]
++                return value
++            json.dump(redact(json.loads(self.model_dump_json())),f,ensure_ascii=False,indent=4)
+ 
+     def to_df(self) -> pd.DataFrame:
+         """
+diff --git a/src/vita/utils/llm_utils.py b/src/vita/utils/llm_utils.py
+index df9e92f..b668282 100644
+--- a/src/vita/utils/llm_utils.py
++++ b/src/vita/utils/llm_utils.py
+@@ -198,6 +198,11 @@ def generate(
+ 
+     try:
+         response = client.chat.completions.create(**request)
++        while response.choices[0].finish_reason == 'length' and request.get('max_tokens',65536)<65536:
++            request['max_tokens']=min(65536,request['max_tokens']*2)
++            response=client.chat.completions.create(**request)
++        if response.choices[0].finish_reason == 'length':
++            raise RuntimeError('Model output truncated after maximum budget; not a valid agent response')
+     except Exception as e:
+         logger.error(f"[model={model}] {e}")
+         raise
