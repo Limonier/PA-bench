@@ -3,15 +3,18 @@ from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from lamp_bm25 import ROOT,augment
-from timed_nex import answer
+from timed_nex import legacy_answer as answer
 old=sorted((ROOT/'results').glob('lamp-official-bm25-medium-20-*'))[-1]
-OUT=ROOT/'results'/('lamp-medium60-none30-'+datetime.now().strftime('%Y%m%dT%H%M%S'));OUT.mkdir()
+OUT=Path(os.getenv('LAMP_TIMED_RESULTS',str(ROOT/'results'/('lamp-medium60-none30-'+datetime.now().strftime('%Y%m%dT%H%M%S')))));OUT.mkdir(exist_ok=True)
 config=json.loads((old/'experiment.json').read_text(encoding='utf-8'));config.update(policy='medium60_then_clean_none30',source_experiment=old.name)
 (OUT/'experiment.json').write_text(json.dumps(config,indent=2),encoding='utf-8')
 questions={t:{q['id']:q for q in json.loads((ROOT/f'data/lamp/LaMP_{t}/test/test_questions.json').read_text(encoding='utf-8'))} for t in [1,2,3,4,5,7]}
 golds={t:{q['id']:q['output'] for q in json.loads((ROOT/f'data/lamp/LaMP_{t}/test/test_outputs.json').read_text(encoding='utf-8'))['golds']} for t in questions}
 def run(item):
  t=item['task'];qid=item['id'];dst=OUT/f'task{t}-{qid}.json';src=old/f'task{t}-{qid}-medium.json'
+ if dst.exists():
+  prior=json.loads(dst.read_text(encoding='utf-8'))
+  if prior.get('status')=='complete':return prior
  if src.exists():
   r=json.loads(src.read_text(encoding='utf-8'))
   if r['status']=='complete' and r['seconds']<=60:

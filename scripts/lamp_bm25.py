@@ -1,4 +1,5 @@
 import ast,json
+from transformers import AutoTokenizer
 from threading import local
 _state=local()
 from pathlib import Path
@@ -18,7 +19,6 @@ def augment(task,sample,k=4):
  corpus,query=scope[names[task]](sample['input'],sample['profile'])
  selected=BM25Okapi([x.split() for x in corpus]).get_top_n(query.split(),list(range(len(corpus))),n=min(k,len(corpus)))
  history=[sample['profile'][i] for i in selected]
- from transformers import AutoTokenizer
  if not hasattr(_state,'tokenizer'):
   _state.tokenizer=AutoTokenizer.from_pretrained(str(ROOT/'data/models/flan-t5-base-tokenizer'),local_files_only=True)
  # Invoke the exact upstream formatter. Allocate enough input space to avoid truncating any selected field.

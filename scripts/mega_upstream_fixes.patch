@@ -1,0 +1,61 @@
+--- a/evaluation/json2csv.py
++++ b/evaluation/json2csv.py
+@@ -248,7 +248,11 @@
+ 
+     def _process_mc_multiple_numeric(self, ctx: QuestionContext) -> Dict[str, Any]:
+         """Process multiple selection MC for numeric mode."""
+-        selected = ctx.answer_data.get("Selected", [])
++        selected = ctx.answer_data.get("Selected")
++        if selected is None:
++            positions = ctx.answer_data.get("SelectedByPosition", [])
++            choices = ctx.question.get("OptionsID", list(range(1, len(ctx.question.get("Options", [])) + 1)))
++            selected = [choices[int(pos) - 1] for pos in positions if 1 <= int(pos) <= len(choices)]
+         return {f"{ctx.qid}_{choice_id}": 1 for choice_id in selected}
+ 
+     def _process_mc_multiple_text(self, ctx: QuestionContext) -> Dict[str, Any]:
+@@ -350,7 +354,7 @@
+         answers = {}
+         selector = ctx.settings.get("Selector", "")
+ 
+-        if selector in ["SL", "ML"]:
++        if selector in ["SL", "ML", "FORM"]:
+             # Check for multi-text
+             if any(key in ctx.question for key in ["Statements", "StatementsID", "Rows", "RowsID"]):
+                 item_ids, item_text = self._get_item_ids_and_text(ctx.question)
+--- a/mega_study_evaluation/common/stats_analysis.py
++++ b/mega_study_evaluation/common/stats_analysis.py
+@@ -138,7 +138,7 @@
+                     s_pool = np.sqrt(
+                         ((n1 - 1) * g1.var(ddof=1) + (n2 - 1) * g2.var(ddof=1)) / (n1 + n2 - 2)
+                     )
+-                    d_human = (g1.mean() - g2.mean()) / s_pool if s_pool > 0 else np.nan
++                    d_human = (g1.mean() - g2.mean()) / s_pool if pd.notna(s_pool) and s_pool > 0 else np.nan
+ 
+         # For twins
+         if cond_t in pair_data.columns:
+@@ -151,7 +151,7 @@
+                     s_pool = np.sqrt(
+                         ((n1 - 1) * g1.var(ddof=1) + (n2 - 1) * g2.var(ddof=1)) / (n1 + n2 - 2)
+                     )
+-                    d_twin = (g1.mean() - g2.mean()) / s_pool if s_pool > 0 else np.nan
++                    d_twin = (g1.mean() - g2.mean()) / s_pool if pd.notna(s_pool) and s_pool > 0 else np.nan
+ 
+     return {"effect_size_human": d_human, "effect_size_twin": d_twin}
+ 
+--- a/mega_study_evaluation/obedient_twins/mega_study_evaluation.py
++++ b/mega_study_evaluation/obedient_twins/mega_study_evaluation.py
+@@ -315,10 +315,12 @@
+     x = np.arange(len(orders))
+ 
+     for i, (sc, tt, cond) in enumerate(orders):
+-        ax.bar(x[i], means[i], yerr=sems[i], capsize=5, color=color_map[(tt, cond)])
++        if pd.isna(means[i]):
++            continue
++        ax.bar(x[i], float(means[i]) if pd.notna(means[i]) else np.nan, yerr=float(sems[i]) if pd.notna(sems[i]) else None, capsize=5, color=color_map[(tt, cond)])
+         ax.text(
+             x[i],
+-            means[i] + sems[i] + 0.05,
++            float(means[i]) + (float(sems[i]) if pd.notna(sems[i]) else 0) + 0.05,
+             f"{means[i]:.2f}",
+             ha="center",
+             va="bottom",
