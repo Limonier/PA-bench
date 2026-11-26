@@ -216,6 +216,7 @@ def main():
     p.add_argument('--study', required=True)
     p.add_argument('--predictions', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--model-label', default='nex-n2.5-pro', help='Record the actual generating model for this result directory')
     p.add_argument('--judge', action='store_true', help='Enable the locked Nex classifier required by quantitative_intuition')
     p.add_argument('--creativity-ratings', type=Path, help='Directory containing independently rated human and NEW Nex creativity responses')
     a = p.parse_args()
@@ -242,7 +243,7 @@ def main():
                 raise FileNotFoundError(ratings)
             shutil.copyfile(ratings, a.output / name)
     total = len(pd.read_parquet(ROOT / f'data/mega/data/{a.study}-00000-of-00001.parquet', columns=['PID']))
-    coverage = {'status': 'pending', 'model': 'nex-n2.5-pro', 'published_total': total, 'attempted': len(attempted), 'validated_predictions': len(records),
+    coverage = {'status': 'pending', 'model': a.model_label, 'published_total': total, 'attempted': len(attempted), 'validated_predictions': len(records),
                 'budget_abandoned': len(abandoned-set(records)), 'failed_or_invalid': len(attempted - set(records)), 'not_attempted': total - len(attempted),
                 'score_scope': 'validated_predictions_after_official_filters',
                 'missing_optional_outcomes': ['creativity_rating_byhuman'] if a.study == 'idea_generation' and not a.creativity_ratings else []}

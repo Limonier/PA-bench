@@ -32,8 +32,7 @@ def serve(path, causal):
     limit=min(2048,getattr(model.config,'max_position_embeddings',512)-2,tok.model_max_length)
     def encode(text):
         return tok(text,return_tensors='pt').to(device)
-    for line in sys.stdin:
-        req=json.loads(line)
+    def prepare(req):
         q=req['q']
         hist='\n'.join(f"{k}: {v}" for k,v in req['evidence'])
         if req['mode']=='gpg':
@@ -57,10 +56,19 @@ def serve(path, causal):
         x=encode(tok.decode(prefix)+'\n'+question)
         if x.input_ids.size(1)>limit:
             x={k:v[:,-limit:] for k,v in x.items()}
-        pos=-1 if causal else int((x['input_ids'][0]==tok.mask_token_id).nonzero()[-1].item())
+        pos=x['input_ids'].size(1)-1 if causal else int((x['input_ids'][0]==tok.mask_token_id).nonzero()[-1].item())
+        return x,pos,[c[0] for c in codes]
+
+    for line in sys.stdin:
+        request=json.loads(line)
+        batch=request if isinstance(request,list) else [request]
+        prepared=[prepare(req) for req in batch]
+        ids=torch.nn.utils.rnn.pad_sequence([x['input_ids'][0] for x,_,_ in prepared],batch_first=True,padding_value=tok.pad_token_id)
+        attention=torch.nn.utils.rnn.pad_sequence([x['attention_mask'][0] for x,_,_ in prepared],batch_first=True,padding_value=0)
         with torch.inference_mode():
-            logits=model(**x).logits[0,pos,[c[0] for c in codes]].float()
-        print(json.dumps(logits.softmax(0).tolist()),flush=True)
+            logits=model(input_ids=ids,attention_mask=attention).logits
+        result=[logits[i,pos,codes].float().softmax(0).tolist() for i,(_,pos,codes) in enumerate(prepared)]
+        print(json.dumps(result if isinstance(request,list) else result[0]),flush=True)
 
 if __name__=='__main__':
     serve(sys.argv[1],sys.argv[2]=='causal')

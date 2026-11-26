@@ -45,6 +45,27 @@ class Model:
             raise ValueError('Invalid candidate scores')
         return p
 
+    def score_many(self, requests, batch_size):
+        results=[]
+        for start in range(0,len(requests),batch_size):
+            batch=requests[start:start+batch_size]
+            if batch_size==1:
+                results.extend(self.score(q,h,mode) for q,h,mode in batch)
+                continue
+            t=time.monotonic()
+            payload=[dict(q={k:q[k] for k in ('text','options')},evidence=retrieve(h,q['text']+' '+' '.join(q['options']),mode),mode=mode) for q,h,mode in batch]
+            dump(self.worker.stdin,payload);self.worker.stdin.flush()
+            line=self.worker.stdout.readline()
+            if not line:raise RuntimeError('Model worker stopped before returning batch')
+            values=json.loads(line)
+            if len(values)!=len(batch):raise ValueError('Invalid batch size returned')
+            for (q,_,_),value in zip(batch,values):
+                p=np.array(value)
+                if len(p)!=len(q['options']) or not np.isfinite(p).all() or np.any(p<0) or not np.isclose(p.sum(),1):raise ValueError('Invalid candidate scores')
+                results.append(p)
+            self.calls+=len(batch);self.seconds+=time.monotonic()-t
+        return results
+
 
 class Output:
     def __init__(self,path,stack):
@@ -64,6 +85,22 @@ class Output:
             dump(self.files['predictions'],dict(id=key,pid=pid,method=m,p=np.asarray(p).tolist()))
         self.labels[key]=y
         dump(self.files['labels'],dict(id=key,actual=y))
+        for f in self.files.values():f.flush()
+
+
+def resume_a_predictions(path):
+    if path is None:return {},{}
+    inputs={};predictions=defaultdict(dict)
+    for name in ('inputs','predictions'):
+        with (path/(name+'.jsonl')).open(encoding='utf8') as f:
+            for line in f:
+                try:r=json.loads(line)
+                except json.JSONDecodeError:
+                    if not line.endswith('\n'):continue
+                    raise
+                if name=='inputs':inputs[r['id']]=r
+                else:predictions[r['id']][r['method']]=r['p']
+    return inputs,predictions
 
 
 def select_people(hist):
@@ -83,10 +120,7 @@ def matched(hist):
     return {u:people[j] for u,j in zip(people,sim.argmax(1))}
 
 
-def run_a(args,model,out):
-    cases=list(mega(args.data,args.studies))
-    ids={u for u,*_ in cases}
-    hist=dict(twin(args.data,users=ids))
+def filter_target_history(hist,cases):
     # Exclude overlapping prompts, even if their IDs differ across studies.
     from difflib import SequenceMatcher
     import re
@@ -98,7 +132,13 @@ def run_a(args,model,out):
         t=norm(key.partition('|')[2])
         return not any(t==v or (min(len(t),len(v))>=35 and (t in v or v in t))
             or (.8<len(t)/max(len(v),1)<1.25 and SequenceMatcher(None,t,v).quick_ratio()>.88 and SequenceMatcher(None,t,v).ratio()>.88) for v in tasks)
-    hist={u:{k:v for k,v in h.items() if allowed(k)} for u,h in hist.items()}
+    return {u:{k:v for k,v in h.items() if allowed(k)} for u,h in hist.items()}
+
+
+def run_a(args,model,out):
+    cases=list(mega(args.data,args.studies))
+    ids={u for u,*_ in cases}
+    hist=filter_target_history(dict(twin(args.data,users=ids)),cases)
     train=defaultdict(list)
     for u,s,q,y in cases:
         if u in hist and split(u)=='dev' and s!=args.holdout:
@@ -109,26 +149,54 @@ def run_a(args,model,out):
     dump(out.files['audit'],dict(fixed_order=route.fixed,pool_size=len(route.pool)))
     routes={}
     for u in hist:
-        if split(u)=='test' and len(set(hist[u])&set(route.pool))>=10:
+        if split(u)==args.eval_split and len(set(hist[u])&set(route.pool))>=10:
             routes[u]={k:route.route(hist[u],k,10,random.Random(digest(u))) for k in ('random','fixed','information','adaptive')}
     three={u:dict(list(v['adaptive'].items())[:3]) for u,v in routes.items()}
     donors=matched(three)
+    old_inputs,old_predictions=resume_a_predictions(args.resume_from)
+    reused=0
     for u,s,q,y in cases:
-        if split(u)!='test' or u not in hist:continue
+        if split(u)!=args.eval_split or u not in hist:continue
         if len(set(hist[u])&set(route.pool))<10:
             AUDIT['A_incomplete_pool']+=1
             continue
         key=f'{s}/{u}/{q["qid"]}'
-        preds={}
+        requests={}
         trace={}
         for policy in ('random','fixed','information','adaptive'):
             seq=routes[u][policy]
             trace[policy]=list(seq.items())
             for n in (0,1,3,5,10):
-                if n==0 and 'empty' in preds:continue
-                preds[f'{policy}@{n}' if n else 'empty']=model.score(q,dict(list(seq.items())[:n]),args.reader)
-        preds['matched@3']=model.score(q,three[donors[u]],args.reader)
-        out.record(u,key,q,trace,preds,[y],{'study':s,'heldout_study':s==args.holdout,'matched':donors[u]})
+                if n==0 and 'empty' in requests:continue
+                requests[f'{policy}@{n}' if n else 'empty']=(q,dict(list(seq.items())[:n]),args.reader)
+        requests['matched@3']=(q,three[donors[u]],args.reader)
+        groups={'study':s,'heldout_study':s==args.holdout,'matched':donors[u]}
+        saved=old_inputs.get(key)
+        if saved and saved==dict(id=key,pid=u,question=q,history=json.loads(json.dumps(trace)),groups=groups) and set(old_predictions[key])==set(requests):
+            preds={k:np.array(v) for k,v in old_predictions[key].items()}
+            reused+=1
+        else:
+            preds=dict(zip(requests,model.score_many(list(requests.values()),args.batch_size)))
+        out.record(u,key,q,trace,preds,[y],groups)
+    dump(out.files['audit'],dict(resumed_tracks=reused,batch_size=args.batch_size))
+
+
+def b_records(args):
+    selected=None
+    if args.b_subset:
+        manifest=json.loads(args.b_subset.read_text(encoding='utf8'))
+        selected={key:fold for fold,keys in manifest['samples'].items() for key in keys}
+        if len(selected)!=sum(map(len,manifest['samples'].values())):
+            raise ValueError('Duplicate sample in B subset')
+    found=set()
+    for u,h,q,a,b in twin(args.data,True):
+        key=f'{u}/{q["qid"]}/'+digest(q['text'])[:12]
+        if selected is not None:
+            if key not in selected:continue
+            if key in found or selected[key]!=split(u):raise ValueError('B subset mismatch: '+key)
+            found.add(key)
+        yield u,h,q,a,b
+    if selected is not None and found!=set(selected):raise ValueError('B subset contains unavailable samples')
 
 
 def run_b(args,model,out):
@@ -136,21 +204,26 @@ def run_b(args,model,out):
     fitted=set()
     def features(h,p):
         return [np.log1p(len(h)),len(p),float(np.diff(np.sort(p)[-2:])[0])]
+    references={}
+    def reference(q):
+        key=(q['text'],tuple(q['options']))
+        if key not in references:references[key]=model.score(q,{},'empty')
+        return references[key]
     held={}
-    for u,h,q,a,b in twin(args.data,True):
+    for u,h,q,a,b in b_records(args):
         if split(u)=='test':held.setdefault(u,h)
         if split(u) in ('dev','cal'):
             fitted.add(u)
             p=model.score(q,h,args.reader)
-            (dev if split(u)=='dev' else cal).append((p,model.score(q,{},'empty'),features(h,p),a,b))
+            (dev if split(u)=='dev' else cal).append((p,reference(q),features(h,p),a,b))
     if not dev or not cal:raise ValueError('Empty development/calibration fold')
     out.cohort(fitted,'reliability_fit_or_calibration')
     predict=calibrators(dev,cal)
     donors=matched(held)
-    for u,h,q,a,b in twin(args.data,True):
+    for u,h,q,a,b in b_records(args):
         if split(u)!='test':continue
         p=model.score(q,h,args.reader)
-        results=predict(p,model.score(q,{},'empty'),features(h,p))
+        results=predict(p,reference(q),features(h,p))
         results['matched']=model.score(q,held[donors[u]],args.reader)
         key=f'{u}/{q["qid"]}/'+digest(q['text'])[:12]
         out.record(u,key,q,retrieve(h,q['text']+' '+' '.join(q['options']),args.reader),results,[a,b],{'matched':donors[u]})
@@ -175,7 +248,7 @@ def run_c(args,model,out):
     ws={k:fit_menu(dev,k) for k in ('independent','shared','personal')}
     out.cohort((u for u in hist if split(u)=='dev'),'menu_fit')
     dump(out.files['audit'],{'menu_weights':{k:w.tolist() for k,w in ws.items()}})
-    us=select_people({u for u in vs if split(u)=='test'})
+    us=select_people({u for u in vs if split(u)==args.eval_split})
     swap=dict(zip(us,us[1:]+us[:1]))
     donors=matched({u:hist[u] for u in us})
     for u,_,q,y in cases:

@@ -290,7 +290,7 @@ def predict(bench,method,case,out,request=chat,make_backend=backend_for,answer_l
     return item
 
 
-def score(bench,items,out,expected,workers,retries=None,first_pass=None,repeat_failures=False):
+def score(bench,items,out,expected,workers,retries=None,first_pass=None,repeat_failures=False,judge_classifier=None,judge_name=None):
     valid=[r for r in items if r['status']=='complete']
     summary={'expected':expected,'attempted':len(items),'valid_predictions':len(valid),'statuses':dict(Counter(r['status'] for r in items)),
              'memory_empty':sum(r.get('memory_empty',False) for r in items),'median_generated_tokens':statistics.median(r['generated_tokens'] for r in items) if items else None,
@@ -343,6 +343,7 @@ def score(bench,items,out,expected,workers,retries=None,first_pass=None,repeat_f
                        macro_f1_valid=f1_score([a for a,b in mapped],[b for a,b in mapped],labels=LABELS,average='macro',zero_division=0) if mapped else None)
     else:
         from score_fingertip import compute_sim1,classify
+        if judge_classifier is not None:classify=judge_classifier
         task_map={r['id']:r for r in fingertip_tasks()}
         sim=compute_sim1(valid,task_map) if valid else []
         (out/f'sim1-items{suffix}.json').write_text(json.dumps(sim,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -369,7 +370,7 @@ def score(bench,items,out,expected,workers,retries=None,first_pass=None,repeat_f
         summary.update(Sim1_valid=sum(r['Sim1'] for r in sim)/len(sim) if sim else None,
                        Sim1_attempted=sum(r['Sim1'] for r in sim)/len(items) if items else None,
                        SR1_valid=sum(labels)/len(labels) if labels else None,SR1_attempted=sum(labels)/len(items) if items else None,
-                       SR1_judged=len(labels),SR1_failed=len(valid)-len(labels),judge='Nex-medium substitution, no additional token cap')
+                       SR1_judged=len(labels),SR1_failed=len(valid)-len(labels),judge=judge_name or 'Nex-medium substitution, no additional token cap')
     (out/f'scores{suffix}.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
     print('SCORES',json.dumps(summary,ensure_ascii=False),flush=True)
 

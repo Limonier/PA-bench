@@ -283,6 +283,18 @@ class AsyncNex:
     async def create(self, *, messages, temperature=0, **kwargs):
         self.calls += 1
         content = await asyncio.to_thread(self._chat, messages, temperature=temperature)
+        # Some OpenAI-compatible gateways wrap an otherwise valid JSON value in
+        # a Markdown fence. Normalize only that transport envelope; preserve all
+        # values and leave malformed or natural-language content untouched.
+        stripped = content.strip()
+        if stripped.startswith('```') and stripped.endswith('```'):
+            candidate = stripped.partition('\n')[2].rsplit('```', 1)[0].strip()
+            try:
+                json.loads(candidate)
+            except ValueError:
+                pass
+            else:
+                content = candidate
         return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=content))])
 
 

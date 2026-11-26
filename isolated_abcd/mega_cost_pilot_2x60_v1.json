@@ -1,0 +1,502 @@
+{
+  "study": "context_effects",
+  "history_protocol": "Last 60 legal single-choice responses in published full_persona questionnaire order after target prompt overlap removal; no fabricated timestamps",
+  "users": [
+    {
+      "id": "pid_374",
+      "user_id": "374",
+      "history": [
+        [
+          "QID198#shuffle #1|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #1",
+          "1"
+        ],
+        [
+          "QID198#shuffle #2|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #2",
+          "1"
+        ],
+        [
+          "QID198#shuffle #3|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #3",
+          "1"
+        ],
+        [
+          "QID198#shuffle #4|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #4",
+          "2"
+        ],
+        [
+          "QID198#shuffle #5|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #5",
+          "1"
+        ],
+        [
+          "QID198#shuffle #6|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #6",
+          "1"
+        ],
+        [
+          "QID198#shuffle #7|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #7",
+          "2"
+        ],
+        [
+          "QID198#shuffle #8|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #8",
+          "2"
+        ],
+        [
+          "QID198#shuffle #9|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #9",
+          "1"
+        ],
+        [
+          "QID198#shuffle #10|Consider the following hypothetical situation: A deck with 10 cards is randomly shuffled 10 separate times. The 10 cards are composed of 7 cards with the number “1” on the down side and 3 cards with the number “2” on the down side. Each time the 10 cards are reshuffled, your task is to predict the number on the down side of the top card. Imagine that you will receive $100 for each downside number you correctly predict, and that you want to earn as much money as possible. What would you predict after ... shuffle #10",
+          "1"
+        ],
+        [
+          "QID288#bicycles|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" bicycles",
+          "very beneficial"
+        ],
+        [
+          "QID288#alcoholic beverages|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" alcoholic beverages",
+          "low benefit"
+        ],
+        [
+          "QID288#chemical plants|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" chemical plants",
+          "moderately beneficial"
+        ],
+        [
+          "QID288#pesticides|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" pesticides",
+          "moderately beneficial"
+        ],
+        [
+          "QID289#bicycles|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" bicycles",
+          "low risk"
+        ],
+        [
+          "QID289#alcoholic beverages|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" alcoholic beverages",
+          "very risky"
+        ],
+        [
+          "QID289#chemical plants|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" chemical plants",
+          "very risky"
+        ],
+        [
+          "QID289#pesticides|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" pesticides",
+          "extremely risky"
+        ],
+        [
+          "QID291|Imagine that there will be a deadly flu going around your area next winter. Your doctor says that you have a 10% chance (10 out of 100) of dying from this flu. However, a new flu vaccine has been developed and tested. If taken, the vaccine prevents you from catching the deadly flu. However, there is one serious risk involved with taking this vaccine. The vaccine is made from a somewhat weaker type of flu virus, and there is a 5% (5 out of 100) risk of the vaccine causing you to die from the weaker type of flu. Imagine that this vaccine is completely covered by health insurance. If you had to decide now, which would you choose?",
+          "I would probably take the vaccine. I would thus accept the 5% chance of dying from the weaker flu in the vaccine"
+        ],
+        [
+          "QID196|Assume that you are presented with two trays of black and white marbles, a large tray that contains 100 marbles and a small tray that contains 10 marbles. The marbles are spread in a single layer in each tray. You must draw out one marble (without peeking, of course) from either tray. If you draw a black marble you win $2. Consider a condition in which the small tray contains 1 black marble and 9 white marbles, and the large tray contains 8 black marbles and 92 white marbles. From which tray would you prefer to select a marble in a real situation?",
+          "the small tray"
+        ],
+        [
+          "QID9_1|Please consider the following product category: Snacks - Tortilla Chips. Suppose you are in a grocery store, and you see the following product in that category: Doritos Nacho Cheese Tortilla Snack Chips, Party Size, 14.5 oz Bag. The product is priced at: $2.38. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_2|Please consider the following product category: Paper Towels. Suppose you are in a grocery store, and you see the following product in that category: Bounty Select-a-Size Paper Towels, 12 Double Rolls, White. The product is priced at: $8.87. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_3|Please consider the following product category: Ice Cream. Suppose you are in a grocery store, and you see the following product in that category: Haagen Dazs Coffee Ice Cream, Gluten Free, Kosher, 14.0 oz. The product is priced at: $5.02. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_4|Please consider the following product category: Light Beer (Low Calorie/Alcohol). Suppose you are in a grocery store, and you see the following product in that category: Bud Light Beer, 24 Pack, 12 fl oz Aluminum Cans, 4.2% ABV, Domestic Lager. The product is priced at: $20.98. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_5|Please consider the following product category: Refrigerated Bacon. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Fully Cooked Original Bacon, 2.52 oz Box. The product is priced at: $7.69. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_6|Please consider the following product category: Fruit Drinks. Suppose you are in a grocery store, and you see the following product in that category: Kool Aid Jammers Variety Pack with Tropical Punch, Grape & Cherry Kids Drink 0% Juice Box Pouches, 30 Ct Box, 6 fl oz Pouches. The product is priced at: $2.91. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_7|Please consider the following product category: Yogurt - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Chobani Non-Fat Greek Yogurt, Vanilla Blended 32 oz, Plastic. The product is priced at: $11.16. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_8|Please consider the following product category: Detergents - Heavy Duty - Liquid. Suppose you are in a grocery store, and you see the following product in that category: Purex Liquid Laundry Detergent Plus OXI, Stain Defense Technology, 128 Fluid Ounces, 85 Wash Loads. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_9|Please consider the following product category: Cookies. Suppose you are in a grocery store, and you see the following product in that category: Little Debbie Oatmeal Creme Pies, 12 ct, 16.2 oz. The product is priced at: $3.75. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_10|Please consider the following product category: Cat Food - Wet Type. Suppose you are in a grocery store, and you see the following product in that category: Purina Fancy Feast Chicken Feast Classic Grain Free Wet Cat Food Pate - 3 oz. Can. The product is priced at: $1.41. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_11|Please consider the following product category: Soup. Suppose you are in a grocery store, and you see the following product in that category: Maruchan Ramen Noodle Chicken Flavor Soup, 3 Oz, 12 Count Shelf Stable Package. The product is priced at: $11.96. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_12|Please consider the following product category: Bottled Water. Suppose you are in a grocery store, and you see the following product in that category: OZARKA Brand 100% Natural Spring Water, 16.9-ounce plastic bottles (Pack of 35). The product is priced at: $3.99. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_13|Please consider the following product category: Candy - Non-Chocolate. Suppose you are in a grocery store, and you see the following product in that category: HARIBO Goldbears Original Gummy Bears, 28.8oz Stand Up Bag. The product is priced at: $1.30. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_14|Please consider the following product category: Toilet Tissue. Suppose you are in a grocery store, and you see the following product in that category: Angel Soft Toilet Paper, 9 Mega Rolls, Soft and Strong Toilet Tissue. The product is priced at: $10.69. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_15|Please consider the following product category: Candy - Chocolate. Suppose you are in a grocery store, and you see the following product in that category: Hershey's Milk Chocolate Candy, Bars 1.55 oz, 6 Count. The product is priced at: $9.07. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_16|Please consider the following product category: Dairy Products. Suppose you are in a grocery store, and you see the following product in that category: Land O Lakes Salted Stick Butter, 16 oz, 4 Sticks. The product is priced at: $5.28. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_17|Please consider the following product category: Fruit Juice. Suppose you are in a grocery store, and you see the following product in that category: Capri Sun Variety Pack with Fruit Punch, Strawberry Kiwi & Pacific Cooler Juice Box Pouches, 30 ct Box, 6 fl oz Pouches. The product is priced at: $1.89. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_18|Please consider the following product category: Cereal - Ready to Eat. Suppose you are in a grocery store, and you see the following product in that category: Cinnamon Toast Crunch Breakfast Cereal, Crispy Cinnamon Cereal, Family Size, 18.8 oz. The product is priced at: $1.97. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_19|Please consider the following product category: Dairy - Milk - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Great Value Milk Whole Vitamin D Gallon. The product is priced at: $3.92. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_20|Please consider the following product category: Frozen Italian Entrees. Suppose you are in a grocery store, and you see the following product in that category: Smart Ones Three Cheese Ziti Marinara Frozen Meal, 9 Oz Box. The product is priced at: $4.52. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_21|Please consider the following product category: Bakery - Fresh Cakes. Suppose you are in a grocery store, and you see the following product in that category: Little Debbie Zebra Cakes, 13 oz. The product is priced at: $4.29. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_22|Please consider the following product category: Soft Drinks - Carbonated. Suppose you are in a grocery store, and you see the following product in that category: Coca-Cola Soda Pop, 12 fl oz, 12 Pack Cans. The product is priced at: $16.52. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_23|Please consider the following product category: Beer. Suppose you are in a grocery store, and you see the following product in that category: Stella Artois Lager, 12 Pack, 11.2 fl oz Glass Bottles, 5% ABV, Domestic Beer. The product is priced at: $18.88. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_24|Please consider the following product category: Fresh Eggs. Suppose you are in a grocery store, and you see the following product in that category: Eggland's Best Classic Extra Large White Eggs, 12 count. The product is priced at: $4.45. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_25|Please consider the following product category: Fresh Fruit. Suppose you are in a grocery store, and you see the following product in that category: Fresh Raspberries, 12 oz Container. The product is priced at: $5.69. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_26|Please consider the following product category: Cleaning Supplies. Suppose you are in a grocery store, and you see the following product in that category: ARM & HAMMER Pure Baking Soda, For Baking, Cleaning & Deodorizing, 1 lb Box. The product is priced at: $0.92. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_27|Please consider the following product category: Ground and Whole Bean Coffee. Suppose you are in a grocery store, and you see the following product in that category: Folgers Classic Roast Ground Coffee, Medium Roast, 40.3-Ounce Canister. The product is priced at: $26.48. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_28|Please consider the following product category: Batteries. Suppose you are in a grocery store, and you see the following product in that category: Duracell Coppertop AA Battery, Long Lasting Double A Batteries, 16 Pack. The product is priced at: $9.58. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_29|Please consider the following product category: Pain Remedies - Headache. Suppose you are in a grocery store, and you see the following product in that category: Tylenol Extra Strength Caplets with 500 mg Acetaminophen, 100 Ct. The product is priced at: $21.94. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_30|Please consider the following product category: Snacks - Potato Chips. Suppose you are in a grocery store, and you see the following product in that category: Lay's Classic Potato Snack Chips, Party Size, 13 oz Bag. The product is priced at: $7.62. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_31|Please consider the following product category: Soft Drinks - Low Calorie. Suppose you are in a grocery store, and you see the following product in that category: Coca-Cola Zero Sugar Soda Pop, 16.9 fl oz, 6 Pack Cans. The product is priced at: $6.22. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_32|Please consider the following product category: Frankfurters - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Classic Uncured Beef Franks Hot Dogs, 10 ct Pack. The product is priced at: $3.94. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_33|Please consider the following product category: Refrigerated Deli Meats. Suppose you are in a grocery store, and you see the following product in that category: Goya Cooked Ham 16 oz. The product is priced at: $47.98. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_34|Please consider the following product category: Frozen Novelties. Suppose you are in a grocery store, and you see the following product in that category: Pop-Ice Assorted Fruit Freezer Ice Pops, Gluten-Free Snack, 1.5 oz, 80 Count Fruit Pops. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_35|Please consider the following product category: Cold Remedies - Adult. Suppose you are in a grocery store, and you see the following product in that category: Equate Value Size Honey Lemon Cough Drops with Menthol, 160 Count. The product is priced at: $1.87. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_36|Please consider the following product category: Pet Supplies - Dog Food. Suppose you are in a grocery store, and you see the following product in that category: Purina Dog Chow Complete, Dry Dog Food for Adult Dogs High Protein, Real Chicken, 44 lb Bag. The product is priced at: $46.67. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_37|Please consider the following product category: Baby Milk and Milk Flavoring. Suppose you are in a grocery store, and you see the following product in that category: Horizon Organic Shelf-Stable Whole Milk Boxes, 8 oz., 12 Pack. The product is priced at: $22.37. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_38|Please consider the following product category: Lunchmeat - Sliced - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Chopped Ham & Water product Deli Lunch Meat, 16 Oz Package. The product is priced at: $8.66. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_39|Please consider the following product category: Refrigerated Entrees. Suppose you are in a grocery store, and you see the following product in that category: John Soules Foods Chicken Breast Fajita Strips, Refrigerated, 16oz, 18g Protein per 3oz Serving Size. The product is priced at: $3.59. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_40|Please consider the following product category: Frozen Foods. Suppose you are in a grocery store, and you see the following product in that category: Great Value All Natural Chicken Wing Sections, 4 lb (Frozen). The product is priced at: $25.96. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ]
+      ],
+      "survey_text": "Please answer the following questions as if you were taking this survey. Assume you only see the next question after you answer the previous question. The expected output is a JSON object and the format is provided in the end. \n---\n\nWelcome to the Virtual Lab at Columbia&rsquo;s Center for Decision Sciences We will be presenting you with questionnaires developed by researchers at Columbia and elsewhere. You may only participate once. If you are interested, you may read the optional information sheet below before continuing on with the survey. The purpose of the information sheet is to give you all of the information you will need to help you decide whether or not to continue your participation.\n[Descriptive Information]\n\nSTUDY DESCRIPTION You were invited to participate in this study because you participated in a previous four- wave study (IRB-AAAV5832) which asked you questions about your personality and preferences. The present study is a \"substudy\" in a \"mega-study.\" The purpose of this mega- study is to test the validity of using large language models to predict people's future answers based on their answers to past surveys. People colloquially refer to this prediction task as creating a \"digital twin\" of the participant. The mega-study consists of 15-20 substudies. The new data from each substudy will be provided to the investigators of AAAV5832, to complement the data available for each participant and improve the accuracy of their \"digital twin.\" If you have any questions about this research you may contact Xuwen (Kevin) Hua at the Center for Decision Sciences, Columbia University, 665 W 130th St, New York, NY 10027, telephone (212) 854-5513, email cds@decisionsciences.columbia.edu . If, at any time, you have questions about your rights as a research participant, you may contact the IRB Administrator at the Institutional Review Board, Columbia University, Morningside IRB, telephone (212) 851-7040 , e-mail askirb@columbia.edu . An institutional review board is a committee organized to protect the rights and welfare of participants involved in research. This experiment is run under the protocol number IRB-AAAB1301. STUDY OVERVIEW The purpose of this study is to investigate how people make decisions. The survey will consist of a series of questionnaires, as well as a few personal questions about yourself. On certain pages, we will collect information about how you interact with the survey interface. This may include: (1) how long you spend on each task, (2) how many times you click on a response option, and (3) the timing of each click. At no point will we request or record any audio, video, or photographic information. The survey will take less than 3 minutes to complete. The anticipated number of subjects is 70,000. The anticipated number of subjects of the entire study is 70,000. RISKS There are no foreseeable risks or discomforts to you in filling out the questionnaire or completing the tasks. The only known risk to you of your involvement in this study is the inconvenience of giving up roughly 3 minutes of your time. Although we may ask you to provide some information that could potentially be construed as personally sensitive, all safeguards will be taken to maintain the confidentiality of your data, as described in the \"Confidentiality\" section below. BENEFITS There are no direct benefits that will come to you for participating in this survey. However, there are indirect benefits arising from the potential of the survey to provide valuable information about the psychological processes underlying many important yet everyday decision-making behaviors. Your participation in this survey will, therefore, be of scientific value by contributing to our understanding of the causes of people's preferences and choices. COMPENSATION We thank you for your participation. If you complete or formally withdraw from the study, you will be compensated by the panel once the project is completed. Please notify us by emailing cds@decisionsciences.columbia.edu if you wish to formally withdraw. CONFIDENTIALITY To ensure confidentiality, data will be analyzed and stored with code numbers, never any information that could be used to identify participants. Data will be kept on secure servers and password-protected computers. The data will be stored after the termination of the current research for a period no shorter than 6 years, and at no time will any identifying information about the participants be stored along with the data. The following people and/or agencies will be able to look at and copy your research records: The investigator, study staff and other professionals who may be evaluating the study, authorities from Columbia University, including the Institutional Review Board ('IRB'), and authorities from The Office of Human Research Protections ('OHRP'). An IRB is a committee organized to protect the rights and welfare of people involved in research. VOLUNTARY PARTICIPATION Participation in this study is completely voluntary and non-coercive with no negative consequences for refusal to participate. You may choose to leave the study at any point if you experience discomfort or find that there are any parts of this study that you do not wish to complete. Furthermore, you may refuse to participate or withdraw from the study at any time without penalty or loss of benefits to which you are otherwise entitled. Finally, you may refuse to complete any of the questionnaires or refuse to partake in any of the tasks without penalty or negative consequences.\n[Descriptive Information]\n\nPARTICIPANT'S STATEMENT I have read the study description and I volunteer to take part in this research. If I have questions about the research, I can ask the researcher listed above. I understand that I may refuse to participate or withdraw from participation at any time. I certify that I am 18 years of age or older and freely give my consent to participate in this study. By clicking ‘next’ you are indicating that you agree to participate in this survey, have read and understand this statement, and choose to participate voluntarily. Please complete the survey in one sitting without any breaks and read all materials carefully. If pages are slow to load, do not click \"submit\" or \"next\" multiple times or close your browser window. When you are ready, click the arrow button at the bottom of the page to begin.\n[Descriptive Information]\n\nThank you for agreeing to participate in this study! You will now begin the survey. For this study, it is important that you switch your browser into full-screen mode. Please click the button below to enter full-screen mode and proceed.\n[Descriptive Information]\n\nIn this section, you’ll be asked to make several hypothetical purchase decisions involving different products. You'll start with a practice trial. Please do your best to imagine that you’re making real purchases.\n[Descriptive Information]\n\nQ1:\nPractice Scenario: Office Chair The office chair you have now is so old that it is starting to break. Unfortunately, the same model is no longer available anywhere, so you have to look for something else. On the website of a furniture store, you will come across different models in differ ent price categories. Of course, you want an office chair that matches the rest of your furniture. After you&rsquo;ve looked at which office chair would look good in the room, you still have a few options left. Which of the office chairs below would you choose? Flintan Jules Molter Material Quality: Good Adjustment Option: 2 Comfort: Good Material Quality: Very Good Adjustment Option: 5 Comfort: Very Good Material Quality: Average Adjustment Option: 1 Comfort: Average Price: $229 Shipping: $5 Price: $289 Shipping: $10 Price: $199 Shipping: $7.5\nQuestion Type: Single Choice\nOptions:\n  1 - Flintan\n  2 - Jules\n  3 - Molte\nAnswer: [Masked]\n\nQ2:\nScenario: Printer Because you regularly have to print documents for school, you are looking for a printer. You never bought a printer before, so you ask a friend for help. They helped you with your search and found a brand that seemed to meet your needs. On their advice, you go and see what this brand has to offer, and you find some printers that suit you. For you, additional to the price, the speed of the printer, ease of use, and qualities of the prints were important. Below you will find all printers with corresponding prices and specifications from which you can choose: 50B3 1000AX 240-C Speed: 6 pages per minute Storage: 90 Sheets Quality: Poor Speed: 9 pages per minute Storage: 150 Sheets Quality: Very Good Speed: 15 pages per minute Storage: 200 Sheets Quality: Excellent Price: $79 Price per page: $0.02 Price: $154 Price per page: $0.05 Price: $209 Price per page: $0.06\nQuestion Type: Single Choice\nOptions:\n  1 - 50B3\n  2 - 1000AX\n  3 - 240-C\nAnswer: [Masked]\n\nQ3:\nScenario: Cellphone You had the same phone for five years, and you think you need a new one. You have already searched the internet for which models appeal to you. In any case, you want a large screen so that everything is easy to read. Furthermore, the phones with a bad battery have already been filtered out. Because you sometimes drop your phone, you decide to take our insurance as well. All few options remain, all including insurance. You will make a choice from this. Below you will find all phones with corresponding prices and specifications from which you can choose. X-3A B-1000 Processor Speed: 2.0 Ghz Camera Settings: 2 Ease of Use: 8/10 Processor Speed: 2.8 Ghz Camera Settings: 4 Ease of Use: 9/10 Price: $599 Insurance Premium: $10/Month Price: $729 Insurance Premium: $13/Month\nQuestion Type: Single Choice\nOptions:\n  1 - X-3A\n  2 - B-1000\nAnswer: [Masked]\n\nQ4:\nScenario: Television You still have a fairly old television, and you would like a new smart TV. You decide to search online so that you don’t have to go to the store. There are a few televisions in the most bought category. You don’t really feel like searching much longer; there are so many televisions out there that you’re probably going to make it way too hard on yourself by looking further. You, therefore, decide to choose a model from these televisions. The different prices and specifications of the televisions can be found below: Hal-B HD-558 UHD-9000 Screen Size: 38 inch Picture Quality: Average Ease of Use: Average Screen Size: 42 inch Picture Quality: Very Good Ease of Use: Easy Screen Size: 50 inch Picture Quality: Excellent Ease of Use: Excellent Price: $399 Shipping: $10 Price: $399 Shipping: $10 Price: $649 Shipping: $15\nQuestion Type: Single Choice\nOptions:\n  1 - Hal-B\n  2 - HD-558\n  3 - UHD-9000\nAnswer: [Masked]\n\n\n### Format Instructions:\nIn order to facilitate the postprocessing, you should generate a JSON object by filling in Masks with the appropriate values in the following template for 4 questions, where each question Q1, Q2, ... corresponds to the question Q1, Q2, ... above.\n\n{\n    \"Q1\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q2\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q3\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 2, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q4\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    }\n}\n",
+      "survey_json": "{\"Metadata\": {}, \"Elements\": [{\"ElementType\": \"Block\", \"BlockName\": \"introduction\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_0rJfngvXYz29BRk\", \"Questions\": [{\"QuestionID\": \"QID620\", \"QuestionText\": \"Welcome to the Virtual Lab at Columbia&rsquo;s Center for Decision Sciences We will be presenting you with questionnaires developed by researchers at Columbia and elsewhere. You may only participate once. If you are interested, you may read the optional information sheet below before continuing on with the survey. The purpose of the information sheet is to give you all of the information you will need to help you decide whether or not to continue your participation.\", \"QuestionType\": \"DB\", \"QuestionName\": \"welcome\", \"is_descriptive\": true}, {\"QuestionID\": \"QID621\", \"QuestionText\": \"STUDY DESCRIPTION You were invited to participate in this study because you participated in a previous four- wave study (IRB-AAAV5832) which asked you questions about your personality and preferences. The present study is a \\\"substudy\\\" in a \\\"mega-study.\\\" The purpose of this mega- study is to test the validity of using large language models to predict people's future answers based on their answers to past surveys. People colloquially refer to this prediction task as creating a \\\"digital twin\\\" of the participant. The mega-study consists of 15-20 substudies. The new data from each substudy will be provided to the investigators of AAAV5832, to complement the data available for each participant and improve the accuracy of their \\\"digital twin.\\\" If you have any questions about this research you may contact Xuwen (Kevin) Hua at the Center for Decision Sciences, Columbia University, 665 W 130th St, New York, NY 10027, telephone (212) 854-5513, email cds@decisionsciences.columbia.edu . If, at any time, you have questions about your rights as a research participant, you may contact the IRB Administrator at the Institutional Review Board, Columbia University, Morningside IRB, telephone (212) 851-7040 , e-mail askirb@columbia.edu . An institutional review board is a committee organized to protect the rights and welfare of participants involved in research. This experiment is run under the protocol number IRB-AAAB1301. STUDY OVERVIEW The purpose of this study is to investigate how people make decisions. The survey will consist of a series of questionnaires, as well as a few personal questions about yourself. On certain pages, we will collect information about how you interact with the survey interface. This may include: (1) how long you spend on each task, (2) how many times you click on a response option, and (3) the timing of each click. At no point will we request or record any audio, video, or photographic information. The survey will take less than 3 minutes to complete. The anticipated number of subjects is 70,000. The anticipated number of subjects of the entire study is 70,000. RISKS There are no foreseeable risks or discomforts to you in filling out the questionnaire or completing the tasks. The only known risk to you of your involvement in this study is the inconvenience of giving up roughly 3 minutes of your time. Although we may ask you to provide some information that could potentially be construed as personally sensitive, all safeguards will be taken to maintain the confidentiality of your data, as described in the \\\"Confidentiality\\\" section below. BENEFITS There are no direct benefits that will come to you for participating in this survey. However, there are indirect benefits arising from the potential of the survey to provide valuable information about the psychological processes underlying many important yet everyday decision-making behaviors. Your participation in this survey will, therefore, be of scientific value by contributing to our understanding of the causes of people's preferences and choices. COMPENSATION We thank you for your participation. If you complete or formally withdraw from the study, you will be compensated by the panel once the project is completed. Please notify us by emailing cds@decisionsciences.columbia.edu if you wish to formally withdraw. CONFIDENTIALITY To ensure confidentiality, data will be analyzed and stored with code numbers, never any information that could be used to identify participants. Data will be kept on secure servers and password-protected computers. The data will be stored after the termination of the current research for a period no shorter than 6 years, and at no time will any identifying information about the participants be stored along with the data. The following people and/or agencies will be able to look at and copy your research records: The investigator, study staff and other professionals who may be evaluating the study, authorities from Columbia University, including the Institutional Review Board ('IRB'), and authorities from The Office of Human Research Protections ('OHRP'). An IRB is a committee organized to protect the rights and welfare of people involved in research. VOLUNTARY PARTICIPATION Participation in this study is completely voluntary and non-coercive with no negative consequences for refusal to participate. You may choose to leave the study at any point if you experience discomfort or find that there are any parts of this study that you do not wish to complete. Furthermore, you may refuse to participate or withdraw from the study at any time without penalty or loss of benefits to which you are otherwise entitled. Finally, you may refuse to complete any of the questionnaires or refuse to partake in any of the tasks without penalty or negative consequences.\", \"QuestionType\": \"DB\", \"QuestionName\": \"sheet\\u00a0\", \"is_descriptive\": true}, {\"QuestionID\": \"QID622\", \"QuestionText\": \"PARTICIPANT'S STATEMENT I have read the study description and I volunteer to take part in this research. If I have questions about the research, I can ask the researcher listed above. I understand that I may refuse to participate or withdraw from participation at any time. I certify that I am 18 years of age or older and freely give my consent to participate in this study. By clicking \\u2018next\\u2019 you are indicating that you agree to participate in this survey, have read and understand this statement, and choose to participate voluntarily. Please complete the survey in one sitting without any breaks and read all materials carefully. If pages are slow to load, do not click \\\"submit\\\" or \\\"next\\\" multiple times or close your browser window. When you are ready, click the arrow button at the bottom of the page to begin.\", \"QuestionType\": \"DB\", \"QuestionName\": \"consent\", \"is_descriptive\": true}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Sorbet_Begin\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_d1fYcZPtmvaeHuS\", \"Questions\": [{\"QuestionID\": \"QID631\", \"QuestionText\": \"Thank you for agreeing to participate in this study! You will now begin the survey. For this study, it is important that you switch your browser into full-screen mode. Please click the button below to enter full-screen mode and proceed.\", \"QuestionType\": \"DB\", \"QuestionName\": \"Q631\", \"is_descriptive\": true}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Ctxt_Intro\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_cA6D1uMcDbEydmu\", \"Questions\": [{\"QuestionID\": \"QID541\", \"QuestionText\": \"In this section, you\\u2019ll be asked to make several hypothetical purchase decisions involving different products. You'll start with a practice trial. Please do your best to imagine that you\\u2019re making real purchases.\", \"QuestionType\": \"DB\", \"QuestionName\": \"Intro Text\", \"is_descriptive\": true}, {\"QuestionID\": \"QID544\", \"QuestionText\": \"Practice Scenario: Office Chair The office chair you have now is so old that it is starting to break. Unfortunately, the same model is no longer available anywhere, so you have to look for something else. On the website of a furniture store, you will come across different models in differ ent price categories. Of course, you want an office chair that matches the rest of your furniture. After you&rsquo;ve looked at which office chair would look good in the room, you still have a few options left. Which of the office chairs below would you choose? Flintan Jules Molter Material Quality: Good Adjustment Option: 2 Comfort: Good Material Quality: Very Good Adjustment Option: 5 Comfort: Very Good Material Quality: Average Adjustment Option: 1 Comfort: Average Price: $229 Shipping: $5 Price: $289 Shipping: $10 Price: $199 Shipping: $7.5\", \"QuestionType\": \"MC\", \"QuestionName\": \"Intro\", \"Options\": [\"Flintan\", \"Jules\", \"Molte\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 2, \"SelectedText\": \"Jules\"}}]}, {\"ElementType\": \"Randomizer\", \"FlowID\": \"FL_213\", \"SelectElements\": 1, \"Elements\": [{\"ElementType\": \"Group\", \"FlowID\": \"FL_304\", \"Description\": \"Bin.Cell_Attr.TV_Comp.P\", \"Elements\": [{\"ElementType\": \"Randomizer\", \"FlowID\": \"FL_307\", \"SelectElements\": 3, \"Elements\": [{\"ElementType\": \"Block\", \"BlockName\": \"Comp.Printer\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_damrqyTGO5KZSUS\", \"Questions\": [{\"QuestionID\": \"QID573\", \"QuestionText\": \"Scenario: Printer Because you regularly have to print documents for school, you are looking for a printer. You never bought a printer before, so you ask a friend for help. They helped you with your search and found a brand that seemed to meet your needs. On their advice, you go and see what this brand has to offer, and you find some printers that suit you. For you, additional to the price, the speed of the printer, ease of use, and qualities of the prints were important. Below you will find all printers with corresponding prices and specifications from which you can choose: 50B3 1000AX 240-C Speed: 6 pages per minute Storage: 90 Sheets Quality: Poor Speed: 9 pages per minute Storage: 150 Sheets Quality: Very Good Speed: 15 pages per minute Storage: 200 Sheets Quality: Excellent Price: $79 Price per page: $0.02 Price: $154 Price per page: $0.05 Price: $209 Price per page: $0.06\", \"QuestionType\": \"MC\", \"QuestionName\": \"Comp_Printer\", \"Options\": [\"50B3\", \"1000AX\", \"240-C\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 1, \"SelectedText\": \"50B3\"}}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Bin.Cell_TC\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_4PFfj6wil4BRWOa\", \"Questions\": [{\"QuestionID\": \"QID561\", \"QuestionText\": \"Scenario: Cellphone You had the same phone for five years, and you think you need a new one. You have already searched the internet for which models appeal to you. In any case, you want a large screen so that everything is easy to read. Furthermore, the phones with a bad battery have already been filtered out. Because you sometimes drop your phone, you decide to take our insurance as well. All few options remain, all including insurance. You will make a choice from this. Below you will find all phones with corresponding prices and specifications from which you can choose. X-3A B-1000 Processor Speed: 2.0 Ghz Camera Settings: 2 Ease of Use: 8/10 Processor Speed: 2.8 Ghz Camera Settings: 4 Ease of Use: 9/10 Price: $599 Insurance Premium: $10/Month Price: $729 Insurance Premium: $13/Month\", \"QuestionType\": \"MC\", \"QuestionName\": \"Bin.Cell_TC\", \"Options\": [\"X-3A\", \"B-1000\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 2, \"SelectedText\": \"B-1000\"}}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Attr.TV\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_2ipV4YrgEcz3N0q\", \"Questions\": [{\"QuestionID\": \"QID565\", \"QuestionText\": \"Scenario: Television You still have a fairly old television, and you would like a new smart TV. You decide to search online so that you don\\u2019t have to go to the store. There are a few televisions in the most bought category. You don\\u2019t really feel like searching much longer; there are so many televisions out there that you\\u2019re probably going to make it way too hard on yourself by looking further. You, therefore, decide to choose a model from these televisions. The different prices and specifications of the televisions can be found below: Hal-B HD-558 UHD-9000 Screen Size: 38 inch Picture Quality: Average Ease of Use: Average Screen Size: 42 inch Picture Quality: Very Good Ease of Use: Easy Screen Size: 50 inch Picture Quality: Excellent Ease of Use: Excellent Price: $399 Shipping: $10 Price: $399 Shipping: $10 Price: $649 Shipping: $15\", \"QuestionType\": \"MC\", \"QuestionName\": \"Attr_TV\", \"Options\": [\"Hal-B\", \"HD-558\", \"UHD-9000\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 3, \"SelectedText\": \"UHD-9000\"}}]}]}]}]}], \"EmbeddedData\": {}}"
+    },
+    {
+      "id": "pid_610",
+      "user_id": "610",
+      "history": [
+        [
+          "QID184|Imagine that you go to purchase a jacket for $250. The jacket salesperson informs you that the jacket you wish to buy is on sale for $240 at the other branch of the store which is ten minutes away by car. Would you drive to the other store?",
+          "Yes"
+        ],
+        [
+          "QID191|Imagine that when you went to the movies last week, you were inadvertently exposed to a rare and fatal virus. The possibility of actually contracting the disease is 4 in 1,000, but once you have the illness there is no known cure. On the other hand, you can, readily and now, be given an injection that reduces the possibility of contracting the disease to 3 in 1,000. Unfortunately, these injections are only available in very small quantities and are sold to the highest bidder. What is the highest price you would be prepared to pay for such an injection?",
+          "$100"
+        ],
+        [
+          "QID193|Choose between:",
+          "11% probability of one million dollars 89% probability of nothing"
+        ],
+        [
+          "QID195|According to a comprehensive study by the U.S. Department of Transportation, a particular German car is 8 times more likely than a typical family car to kill occupants of another car in a crash. The U.S. Department of Transportation is considering recommending a ban on the sale of this German car. Do you think that the U.S. should ban the sale of the German car?",
+          "probably yes"
+        ],
+        [
+          "QID203#roll #1|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #1",
+          "red"
+        ],
+        [
+          "QID203#roll #2|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #2",
+          "red"
+        ],
+        [
+          "QID203#roll #3|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #3",
+          "red"
+        ],
+        [
+          "QID203#roll #4|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #4",
+          "red"
+        ],
+        [
+          "QID203#roll #5|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #5",
+          "green"
+        ],
+        [
+          "QID203#roll #6|Consider the following situation: A die with 4 red faces and 2 green faces will be rolled 6 times. Before each roll you will be asked to predict which color (red or green) will show up once the die is rolled. Which color is most likely to show up after ... roll #6",
+          "green"
+        ],
+        [
+          "QID288#bicycles|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" bicycles",
+          "moderately beneficial"
+        ],
+        [
+          "QID288#alcoholic beverages|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" alcoholic beverages",
+          "low benefit"
+        ],
+        [
+          "QID288#chemical plants|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" chemical plants",
+          "slightly beneficial"
+        ],
+        [
+          "QID288#pesticides|Please rate the following technology or products from \"not at all beneficial\" to \"extremely beneficial\" pesticides",
+          "slightly beneficial"
+        ],
+        [
+          "QID289#bicycles|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" bicycles",
+          "low risk"
+        ],
+        [
+          "QID289#alcoholic beverages|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" alcoholic beverages",
+          "slightly risky"
+        ],
+        [
+          "QID289#chemical plants|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" chemical plants",
+          "moderately risky"
+        ],
+        [
+          "QID289#pesticides|Please rate the following technology or products from \"not at all risky\" to \"extremely risky\" pesticides",
+          "moderately risky"
+        ],
+        [
+          "QID291|Imagine that there will be a deadly flu going around your area next winter. Your doctor says that you have a 10% chance (10 out of 100) of dying from this flu. However, a new flu vaccine has been developed and tested. If taken, the vaccine prevents you from catching the deadly flu. However, there is one serious risk involved with taking this vaccine. The vaccine is made from a somewhat weaker type of flu virus, and there is a 5% (5 out of 100) risk of the vaccine causing you to die from the weaker type of flu. Imagine that this vaccine is completely covered by health insurance. If you had to decide now, which would you choose?",
+          "I would probably take the vaccine. I would thus accept the 5% chance of dying from the weaker flu in the vaccine"
+        ],
+        [
+          "QID196|Assume that you are presented with two trays of black and white marbles, a large tray that contains 100 marbles and a small tray that contains 10 marbles. The marbles are spread in a single layer in each tray. You must draw out one marble (without peeking, of course) from either tray. If you draw a black marble you win $2. Consider a condition in which the small tray contains 1 black marble and 9 white marbles, and the large tray contains 8 black marbles and 92 white marbles. From which tray would you prefer to select a marble in a real situation?",
+          "the small tray"
+        ],
+        [
+          "QID9_1|Please consider the following product category: Candy - Chocolate. Suppose you are in a grocery store, and you see the following product in that category: Hershey's Milk Chocolate Candy, Bars 1.55 oz, 6 Count. The product is priced at: $7.78. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_2|Please consider the following product category: Frozen Novelties. Suppose you are in a grocery store, and you see the following product in that category: Pop-Ice Assorted Fruit Freezer Ice Pops, Gluten-Free Snack, 1.5 oz, 80 Count Fruit Pops. The product is priced at: $6.17. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_3|Please consider the following product category: Ground and Whole Bean Coffee. Suppose you are in a grocery store, and you see the following product in that category: Folgers Classic Roast Ground Coffee, Medium Roast, 40.3-Ounce Canister. The product is priced at: $10.59. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_4|Please consider the following product category: Cleaning Supplies. Suppose you are in a grocery store, and you see the following product in that category: ARM & HAMMER Pure Baking Soda, For Baking, Cleaning & Deodorizing, 1 lb Box. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_5|Please consider the following product category: Batteries. Suppose you are in a grocery store, and you see the following product in that category: Duracell Coppertop AA Battery, Long Lasting Double A Batteries, 16 Pack. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_6|Please consider the following product category: Fresh Eggs. Suppose you are in a grocery store, and you see the following product in that category: Eggland's Best Classic Extra Large White Eggs, 12 count. The product is priced at: $1.91. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_7|Please consider the following product category: Frozen Italian Entrees. Suppose you are in a grocery store, and you see the following product in that category: Smart Ones Three Cheese Ziti Marinara Frozen Meal, 9 Oz Box. The product is priced at: $2.26. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_8|Please consider the following product category: Fruit Juice. Suppose you are in a grocery store, and you see the following product in that category: Capri Sun Variety Pack with Fruit Punch, Strawberry Kiwi & Pacific Cooler Juice Box Pouches, 30 ct Box, 6 fl oz Pouches. The product is priced at: $1.89. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_9|Please consider the following product category: Beer. Suppose you are in a grocery store, and you see the following product in that category: Stella Artois Lager, 12 Pack, 11.2 fl oz Glass Bottles, 5% ABV, Domestic Beer. The product is priced at: $28.31. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_10|Please consider the following product category: Yogurt - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Chobani Non-Fat Greek Yogurt, Vanilla Blended 32 oz, Plastic. The product is priced at: $3.35. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_11|Please consider the following product category: Ice Cream. Suppose you are in a grocery store, and you see the following product in that category: Haagen Dazs Coffee Ice Cream, Gluten Free, Kosher, 14.0 oz. The product is priced at: $2.51. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_12|Please consider the following product category: Light Beer (Low Calorie/Alcohol). Suppose you are in a grocery store, and you see the following product in that category: Bud Light Beer, 24 Pack, 12 fl oz Aluminum Cans, 4.2% ABV, Domestic Lager. The product is priced at: $20.98. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_13|Please consider the following product category: Toilet Tissue. Suppose you are in a grocery store, and you see the following product in that category: Angel Soft Toilet Paper, 9 Mega Rolls, Soft and Strong Toilet Tissue. The product is priced at: $13.36. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_14|Please consider the following product category: Frozen Foods. Suppose you are in a grocery store, and you see the following product in that category: Great Value All Natural Chicken Wing Sections, 4 lb (Frozen). The product is priced at: $20.77. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_15|Please consider the following product category: Snacks - Potato Chips. Suppose you are in a grocery store, and you see the following product in that category: Lay's Classic Potato Snack Chips, Party Size, 13 oz Bag. The product is priced at: $8.70. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_16|Please consider the following product category: Refrigerated Entrees. Suppose you are in a grocery store, and you see the following product in that category: John Soules Foods Chicken Breast Fajita Strips, Refrigerated, 16oz, 18g Protein per 3oz Serving Size. The product is priced at: $1.20. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_17|Please consider the following product category: Lunchmeat - Sliced - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Chopped Ham & Water product Deli Lunch Meat, 16 Oz Package. The product is priced at: $4.33. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_18|Please consider the following product category: Pet Supplies - Dog Food. Suppose you are in a grocery store, and you see the following product in that category: Purina Dog Chow Complete, Dry Dog Food for Adult Dogs High Protein, Real Chicken, 44 lb Bag. The product is priced at: $58.34. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_19|Please consider the following product category: Soup. Suppose you are in a grocery store, and you see the following product in that category: Maruchan Ramen Noodle Chicken Flavor Soup, 3 Oz, 12 Count Shelf Stable Package. The product is priced at: $15.95. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_20|Please consider the following product category: Dairy - Milk - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Great Value Milk Whole Vitamin D Gallon. The product is priced at: $3.14. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_21|Please consider the following product category: Frankfurters - Refrigerated. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Classic Uncured Beef Franks Hot Dogs, 10 ct Pack. The product is priced at: $2.36. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_22|Please consider the following product category: Soft Drinks - Low Calorie. Suppose you are in a grocery store, and you see the following product in that category: Coca-Cola Zero Sugar Soda Pop, 16.9 fl oz, 6 Pack Cans. The product is priced at: $6.22. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_23|Please consider the following product category: Cold Remedies - Adult. Suppose you are in a grocery store, and you see the following product in that category: Equate Value Size Honey Lemon Cough Drops with Menthol, 160 Count. The product is priced at: $5.62. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_24|Please consider the following product category: Fresh Fruit. Suppose you are in a grocery store, and you see the following product in that category: Fresh Raspberries, 12 oz Container. The product is priced at: $1.90. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_25|Please consider the following product category: Detergents - Heavy Duty - Liquid. Suppose you are in a grocery store, and you see the following product in that category: Purex Liquid Laundry Detergent Plus OXI, Stain Defense Technology, 128 Fluid Ounces, 85 Wash Loads. The product is priced at: $5.98. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_26|Please consider the following product category: Cereal - Ready to Eat. Suppose you are in a grocery store, and you see the following product in that category: Cinnamon Toast Crunch Breakfast Cereal, Crispy Cinnamon Cereal, Family Size, 18.8 oz. The product is priced at: $2.96. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_27|Please consider the following product category: Pain Remedies - Headache. Suppose you are in a grocery store, and you see the following product in that category: Tylenol Extra Strength Caplets with 500 mg Acetaminophen, 100 Ct. The product is priced at: $6.58. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_28|Please consider the following product category: Candy - Non-Chocolate. Suppose you are in a grocery store, and you see the following product in that category: HARIBO Goldbears Original Gummy Bears, 28.8oz Stand Up Bag. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_29|Please consider the following product category: Dairy Products. Suppose you are in a grocery store, and you see the following product in that category: Land O Lakes Salted Stick Butter, 16 oz, 4 Sticks. The product is priced at: $7.39. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_30|Please consider the following product category: Paper Towels. Suppose you are in a grocery store, and you see the following product in that category: Bounty Select-a-Size Paper Towels, 12 Double Rolls, White. The product is priced at: $31.05. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_31|Please consider the following product category: Snacks - Tortilla Chips. Suppose you are in a grocery store, and you see the following product in that category: Doritos Nacho Cheese Tortilla Snack Chips, Party Size, 14.5 oz Bag. The product is priced at: $0.00. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_32|Please consider the following product category: Baby Milk and Milk Flavoring. Suppose you are in a grocery store, and you see the following product in that category: Horizon Organic Shelf-Stable Whole Milk Boxes, 8 oz., 12 Pack. The product is priced at: $22.37. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_33|Please consider the following product category: Cookies. Suppose you are in a grocery store, and you see the following product in that category: Little Debbie Oatmeal Creme Pies, 12 ct, 16.2 oz. The product is priced at: $5.36. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_34|Please consider the following product category: Bakery - Fresh Cakes. Suppose you are in a grocery store, and you see the following product in that category: Little Debbie Zebra Cakes, 13 oz. The product is priced at: $5.36. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_35|Please consider the following product category: Cat Food - Wet Type. Suppose you are in a grocery store, and you see the following product in that category: Purina Fancy Feast Chicken Feast Classic Grain Free Wet Cat Food Pate - 3 oz. Can. The product is priced at: $1.76. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_36|Please consider the following product category: Fruit Drinks. Suppose you are in a grocery store, and you see the following product in that category: Kool Aid Jammers Variety Pack with Tropical Punch, Grape & Cherry Kids Drink 0% Juice Box Pouches, 30 Ct Box, 6 fl oz Pouches. The product is priced at: $11.63. Would you or would you not purchase this product?",
+          "Yes, I would purchase the product"
+        ],
+        [
+          "QID9_37|Please consider the following product category: Bottled Water. Suppose you are in a grocery store, and you see the following product in that category: OZARKA Brand 100% Natural Spring Water, 16.9-ounce plastic bottles (Pack of 35). The product is priced at: $23.95. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_38|Please consider the following product category: Soft Drinks - Carbonated. Suppose you are in a grocery store, and you see the following product in that category: Coca-Cola Soda Pop, 12 fl oz, 12 Pack Cans. The product is priced at: $9.91. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_39|Please consider the following product category: Refrigerated Deli Meats. Suppose you are in a grocery store, and you see the following product in that category: Goya Cooked Ham 16 oz. The product is priced at: $35.99. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ],
+        [
+          "QID9_40|Please consider the following product category: Refrigerated Bacon. Suppose you are in a grocery store, and you see the following product in that category: Oscar Mayer Fully Cooked Original Bacon, 2.52 oz Box. The product is priced at: $6.83. Would you or would you not purchase this product?",
+          "No, I would not purchase the product"
+        ]
+      ],
+      "survey_text": "Please answer the following questions as if you were taking this survey. Assume you only see the next question after you answer the previous question. The expected output is a JSON object and the format is provided in the end. \n---\n\nWelcome to the Virtual Lab at Columbia&rsquo;s Center for Decision Sciences We will be presenting you with questionnaires developed by researchers at Columbia and elsewhere. You may only participate once. If you are interested, you may read the optional information sheet below before continuing on with the survey. The purpose of the information sheet is to give you all of the information you will need to help you decide whether or not to continue your participation.\n[Descriptive Information]\n\nSTUDY DESCRIPTION You were invited to participate in this study because you participated in a previous four- wave study (IRB-AAAV5832) which asked you questions about your personality and preferences. The present study is a \"substudy\" in a \"mega-study.\" The purpose of this mega- study is to test the validity of using large language models to predict people's future answers based on their answers to past surveys. People colloquially refer to this prediction task as creating a \"digital twin\" of the participant. The mega-study consists of 15-20 substudies. The new data from each substudy will be provided to the investigators of AAAV5832, to complement the data available for each participant and improve the accuracy of their \"digital twin.\" If you have any questions about this research you may contact Xuwen (Kevin) Hua at the Center for Decision Sciences, Columbia University, 665 W 130th St, New York, NY 10027, telephone (212) 854-5513, email cds@decisionsciences.columbia.edu . If, at any time, you have questions about your rights as a research participant, you may contact the IRB Administrator at the Institutional Review Board, Columbia University, Morningside IRB, telephone (212) 851-7040 , e-mail askirb@columbia.edu . An institutional review board is a committee organized to protect the rights and welfare of participants involved in research. This experiment is run under the protocol number IRB-AAAB1301. STUDY OVERVIEW The purpose of this study is to investigate how people make decisions. The survey will consist of a series of questionnaires, as well as a few personal questions about yourself. On certain pages, we will collect information about how you interact with the survey interface. This may include: (1) how long you spend on each task, (2) how many times you click on a response option, and (3) the timing of each click. At no point will we request or record any audio, video, or photographic information. The survey will take less than 3 minutes to complete. The anticipated number of subjects is 70,000. The anticipated number of subjects of the entire study is 70,000. RISKS There are no foreseeable risks or discomforts to you in filling out the questionnaire or completing the tasks. The only known risk to you of your involvement in this study is the inconvenience of giving up roughly 3 minutes of your time. Although we may ask you to provide some information that could potentially be construed as personally sensitive, all safeguards will be taken to maintain the confidentiality of your data, as described in the \"Confidentiality\" section below. BENEFITS There are no direct benefits that will come to you for participating in this survey. However, there are indirect benefits arising from the potential of the survey to provide valuable information about the psychological processes underlying many important yet everyday decision-making behaviors. Your participation in this survey will, therefore, be of scientific value by contributing to our understanding of the causes of people's preferences and choices. COMPENSATION We thank you for your participation. If you complete or formally withdraw from the study, you will be compensated by the panel once the project is completed. Please notify us by emailing cds@decisionsciences.columbia.edu if you wish to formally withdraw. CONFIDENTIALITY To ensure confidentiality, data will be analyzed and stored with code numbers, never any information that could be used to identify participants. Data will be kept on secure servers and password-protected computers. The data will be stored after the termination of the current research for a period no shorter than 6 years, and at no time will any identifying information about the participants be stored along with the data. The following people and/or agencies will be able to look at and copy your research records: The investigator, study staff and other professionals who may be evaluating the study, authorities from Columbia University, including the Institutional Review Board ('IRB'), and authorities from The Office of Human Research Protections ('OHRP'). An IRB is a committee organized to protect the rights and welfare of people involved in research. VOLUNTARY PARTICIPATION Participation in this study is completely voluntary and non-coercive with no negative consequences for refusal to participate. You may choose to leave the study at any point if you experience discomfort or find that there are any parts of this study that you do not wish to complete. Furthermore, you may refuse to participate or withdraw from the study at any time without penalty or loss of benefits to which you are otherwise entitled. Finally, you may refuse to complete any of the questionnaires or refuse to partake in any of the tasks without penalty or negative consequences.\n[Descriptive Information]\n\nPARTICIPANT'S STATEMENT I have read the study description and I volunteer to take part in this research. If I have questions about the research, I can ask the researcher listed above. I understand that I may refuse to participate or withdraw from participation at any time. I certify that I am 18 years of age or older and freely give my consent to participate in this study. By clicking ‘next’ you are indicating that you agree to participate in this survey, have read and understand this statement, and choose to participate voluntarily. Please complete the survey in one sitting without any breaks and read all materials carefully. If pages are slow to load, do not click \"submit\" or \"next\" multiple times or close your browser window. When you are ready, click the arrow button at the bottom of the page to begin.\n[Descriptive Information]\n\nThank you for agreeing to participate in this study! You will now begin the survey. For this study, it is important that you switch your browser into full-screen mode. Please click the button below to enter full-screen mode and proceed.\n[Descriptive Information]\n\nIn this section, you’ll be asked to make several hypothetical purchase decisions involving different products. You'll start with a practice trial. Please do your best to imagine that you’re making real purchases.\n[Descriptive Information]\n\nQ1:\nPractice Scenario: Office Chair The office chair you have now is so old that it is starting to break. Unfortunately, the same model is no longer available anywhere, so you have to look for something else. On the website of a furniture store, you will come across different models in differ ent price categories. Of course, you want an office chair that matches the rest of your furniture. After you&rsquo;ve looked at which office chair would look good in the room, you still have a few options left. Which of the office chairs below would you choose? Flintan Jules Molter Material Quality: Good Adjustment Option: 2 Comfort: Good Material Quality: Very Good Adjustment Option: 5 Comfort: Very Good Material Quality: Average Adjustment Option: 1 Comfort: Average Price: $229 Shipping: $5 Price: $289 Shipping: $10 Price: $199 Shipping: $7.5\nQuestion Type: Single Choice\nOptions:\n  1 - Flintan\n  2 - Jules\n  3 - Molte\nAnswer: [Masked]\n\nQ2:\nScenario: Television You still have a fairly old television, and you would like a new smart TV. You decide to search online so that you don’t have to go to the store. There are a few televisions in the most bought category. You don’t really feel like searching much longer; there are so many televisions out there that you’re probably going to make it way too hard on yourself by looking further. You, therefore, decide to choose a model from these televisions. The different prices and specifications of the televisions can be found below: Hal-B HD-558 UHD-9000 Screen Size: 38 inch Picture Quality: Average Ease of Use: Average Screen Size: 42 inch Picture Quality: Very Good Ease of Use: Easy Screen Size: 50 inch Picture Quality: Excellent Ease of Use: Excellent Price: $399 Shipping: $10 Price: $399 Shipping: $10 Price: $649 Shipping: $15\nQuestion Type: Single Choice\nOptions:\n  1 - Hal-B\n  2 - HD-558\n  3 - UHD-9000\nAnswer: [Masked]\n\nQ3:\nScenario: Cellphone You had the same phone for five years, and you think you need a new one. You have already searched the internet for which models appeal to you. In any case, you want a large screen so that everything is easy to read. Furthermore, the phones with a bad battery have already been filtered out. Because you sometimes drop your phone, you decide to take our insurance as well. All few options remain, all including insurance. You will make a choice from this. Below you will find all phones with corresponding prices and specifications from which you can choose. X-3A B-1000 Processor Speed: 2.0 Ghz Camera Settings: 2 Ease of Use: 8/10 Processor Speed: 2.8 Ghz Camera Settings: 4 Ease of Use: 9/10 Price: $599 Insurance Premium: $10/Month Price: $729 Insurance Premium: $13/Month\nQuestion Type: Single Choice\nOptions:\n  1 - X-3A\n  2 - B-1000\nAnswer: [Masked]\n\nQ4:\nScenario: Printer Because you regularly have to print documents for school, you are looking for a printer. You never bought a printer before, so you ask a friend for help. They helped you with your search and found a brand that seemed to meet your needs. On their advice, you go and see what this brand has to offer, and you find some printers that suit you. For you, additional to the price, the speed of the printer, ease of use, and qualities of the prints were important. Below you will find all printers with corresponding prices and specifications from which you can choose: 50B3 1000AX 240-C Speed: 6 pages per minute Storage: 90 Sheets Quality: Poor Speed: 9 pages per minute Storage: 150 Sheets Quality: Very Good Speed: 15 pages per minute Storage: 200 Sheets Quality: Excellent Price: $79 Price per page: $0.02 Price: $154 Price per page: $0.05 Price: $209 Price per page: $0.06\nQuestion Type: Single Choice\nOptions:\n  1 - 50B3\n  2 - 1000AX\n  3 - 240-C\nAnswer: [Masked]\n\n\n### Format Instructions:\nIn order to facilitate the postprocessing, you should generate a JSON object by filling in Masks with the appropriate values in the following template for 4 questions, where each question Q1, Q2, ... corresponds to the question Q1, Q2, ... above.\n\n{\n    \"Q1\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q2\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q3\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 2, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    },\n    \"Q4\": {\n        \"Question Type\": \"Single Choice\",\n        \"Answers\": {\n            \"SelectedByPosition\": Masked, // a number from 1 to 3, corresponding to the option position\n        \"SelectedText\": \"Masked\" // a string, corresponding to the option text\n        }\n    }\n}\n",
+      "survey_json": "{\"Metadata\": {}, \"Elements\": [{\"ElementType\": \"Block\", \"BlockName\": \"introduction\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_0rJfngvXYz29BRk\", \"Questions\": [{\"QuestionID\": \"QID620\", \"QuestionText\": \"Welcome to the Virtual Lab at Columbia&rsquo;s Center for Decision Sciences We will be presenting you with questionnaires developed by researchers at Columbia and elsewhere. You may only participate once. If you are interested, you may read the optional information sheet below before continuing on with the survey. The purpose of the information sheet is to give you all of the information you will need to help you decide whether or not to continue your participation.\", \"QuestionType\": \"DB\", \"QuestionName\": \"welcome\", \"is_descriptive\": true}, {\"QuestionID\": \"QID621\", \"QuestionText\": \"STUDY DESCRIPTION You were invited to participate in this study because you participated in a previous four- wave study (IRB-AAAV5832) which asked you questions about your personality and preferences. The present study is a \\\"substudy\\\" in a \\\"mega-study.\\\" The purpose of this mega- study is to test the validity of using large language models to predict people's future answers based on their answers to past surveys. People colloquially refer to this prediction task as creating a \\\"digital twin\\\" of the participant. The mega-study consists of 15-20 substudies. The new data from each substudy will be provided to the investigators of AAAV5832, to complement the data available for each participant and improve the accuracy of their \\\"digital twin.\\\" If you have any questions about this research you may contact Xuwen (Kevin) Hua at the Center for Decision Sciences, Columbia University, 665 W 130th St, New York, NY 10027, telephone (212) 854-5513, email cds@decisionsciences.columbia.edu . If, at any time, you have questions about your rights as a research participant, you may contact the IRB Administrator at the Institutional Review Board, Columbia University, Morningside IRB, telephone (212) 851-7040 , e-mail askirb@columbia.edu . An institutional review board is a committee organized to protect the rights and welfare of participants involved in research. This experiment is run under the protocol number IRB-AAAB1301. STUDY OVERVIEW The purpose of this study is to investigate how people make decisions. The survey will consist of a series of questionnaires, as well as a few personal questions about yourself. On certain pages, we will collect information about how you interact with the survey interface. This may include: (1) how long you spend on each task, (2) how many times you click on a response option, and (3) the timing of each click. At no point will we request or record any audio, video, or photographic information. The survey will take less than 3 minutes to complete. The anticipated number of subjects is 70,000. The anticipated number of subjects of the entire study is 70,000. RISKS There are no foreseeable risks or discomforts to you in filling out the questionnaire or completing the tasks. The only known risk to you of your involvement in this study is the inconvenience of giving up roughly 3 minutes of your time. Although we may ask you to provide some information that could potentially be construed as personally sensitive, all safeguards will be taken to maintain the confidentiality of your data, as described in the \\\"Confidentiality\\\" section below. BENEFITS There are no direct benefits that will come to you for participating in this survey. However, there are indirect benefits arising from the potential of the survey to provide valuable information about the psychological processes underlying many important yet everyday decision-making behaviors. Your participation in this survey will, therefore, be of scientific value by contributing to our understanding of the causes of people's preferences and choices. COMPENSATION We thank you for your participation. If you complete or formally withdraw from the study, you will be compensated by the panel once the project is completed. Please notify us by emailing cds@decisionsciences.columbia.edu if you wish to formally withdraw. CONFIDENTIALITY To ensure confidentiality, data will be analyzed and stored with code numbers, never any information that could be used to identify participants. Data will be kept on secure servers and password-protected computers. The data will be stored after the termination of the current research for a period no shorter than 6 years, and at no time will any identifying information about the participants be stored along with the data. The following people and/or agencies will be able to look at and copy your research records: The investigator, study staff and other professionals who may be evaluating the study, authorities from Columbia University, including the Institutional Review Board ('IRB'), and authorities from The Office of Human Research Protections ('OHRP'). An IRB is a committee organized to protect the rights and welfare of people involved in research. VOLUNTARY PARTICIPATION Participation in this study is completely voluntary and non-coercive with no negative consequences for refusal to participate. You may choose to leave the study at any point if you experience discomfort or find that there are any parts of this study that you do not wish to complete. Furthermore, you may refuse to participate or withdraw from the study at any time without penalty or loss of benefits to which you are otherwise entitled. Finally, you may refuse to complete any of the questionnaires or refuse to partake in any of the tasks without penalty or negative consequences.\", \"QuestionType\": \"DB\", \"QuestionName\": \"sheet\\u00a0\", \"is_descriptive\": true}, {\"QuestionID\": \"QID622\", \"QuestionText\": \"PARTICIPANT'S STATEMENT I have read the study description and I volunteer to take part in this research. If I have questions about the research, I can ask the researcher listed above. I understand that I may refuse to participate or withdraw from participation at any time. I certify that I am 18 years of age or older and freely give my consent to participate in this study. By clicking \\u2018next\\u2019 you are indicating that you agree to participate in this survey, have read and understand this statement, and choose to participate voluntarily. Please complete the survey in one sitting without any breaks and read all materials carefully. If pages are slow to load, do not click \\\"submit\\\" or \\\"next\\\" multiple times or close your browser window. When you are ready, click the arrow button at the bottom of the page to begin.\", \"QuestionType\": \"DB\", \"QuestionName\": \"consent\", \"is_descriptive\": true}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Sorbet_Begin\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_d1fYcZPtmvaeHuS\", \"Questions\": [{\"QuestionID\": \"QID631\", \"QuestionText\": \"Thank you for agreeing to participate in this study! You will now begin the survey. For this study, it is important that you switch your browser into full-screen mode. Please click the button below to enter full-screen mode and proceed.\", \"QuestionType\": \"DB\", \"QuestionName\": \"Q631\", \"is_descriptive\": true}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Ctxt_Intro\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_cA6D1uMcDbEydmu\", \"Questions\": [{\"QuestionID\": \"QID541\", \"QuestionText\": \"In this section, you\\u2019ll be asked to make several hypothetical purchase decisions involving different products. You'll start with a practice trial. Please do your best to imagine that you\\u2019re making real purchases.\", \"QuestionType\": \"DB\", \"QuestionName\": \"Intro Text\", \"is_descriptive\": true}, {\"QuestionID\": \"QID544\", \"QuestionText\": \"Practice Scenario: Office Chair The office chair you have now is so old that it is starting to break. Unfortunately, the same model is no longer available anywhere, so you have to look for something else. On the website of a furniture store, you will come across different models in differ ent price categories. Of course, you want an office chair that matches the rest of your furniture. After you&rsquo;ve looked at which office chair would look good in the room, you still have a few options left. Which of the office chairs below would you choose? Flintan Jules Molter Material Quality: Good Adjustment Option: 2 Comfort: Good Material Quality: Very Good Adjustment Option: 5 Comfort: Very Good Material Quality: Average Adjustment Option: 1 Comfort: Average Price: $229 Shipping: $5 Price: $289 Shipping: $10 Price: $199 Shipping: $7.5\", \"QuestionType\": \"MC\", \"QuestionName\": \"Intro\", \"Options\": [\"Flintan\", \"Jules\", \"Molte\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 1, \"SelectedText\": \"Flintan\"}}]}, {\"ElementType\": \"Randomizer\", \"FlowID\": \"FL_213\", \"SelectElements\": 1, \"Elements\": [{\"ElementType\": \"Group\", \"FlowID\": \"FL_304\", \"Description\": \"Bin.Cell_Attr.TV_Comp.P\", \"Elements\": [{\"ElementType\": \"Randomizer\", \"FlowID\": \"FL_307\", \"SelectElements\": 3, \"Elements\": [{\"ElementType\": \"Block\", \"BlockName\": \"Attr.TV\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_2ipV4YrgEcz3N0q\", \"Questions\": [{\"QuestionID\": \"QID565\", \"QuestionText\": \"Scenario: Television You still have a fairly old television, and you would like a new smart TV. You decide to search online so that you don\\u2019t have to go to the store. There are a few televisions in the most bought category. You don\\u2019t really feel like searching much longer; there are so many televisions out there that you\\u2019re probably going to make it way too hard on yourself by looking further. You, therefore, decide to choose a model from these televisions. The different prices and specifications of the televisions can be found below: Hal-B HD-558 UHD-9000 Screen Size: 38 inch Picture Quality: Average Ease of Use: Average Screen Size: 42 inch Picture Quality: Very Good Ease of Use: Easy Screen Size: 50 inch Picture Quality: Excellent Ease of Use: Excellent Price: $399 Shipping: $10 Price: $399 Shipping: $10 Price: $649 Shipping: $15\", \"QuestionType\": \"MC\", \"QuestionName\": \"Attr_TV\", \"Options\": [\"Hal-B\", \"HD-558\", \"UHD-9000\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 2, \"SelectedText\": \"HD-558\"}}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Bin.Cell_TC\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_4PFfj6wil4BRWOa\", \"Questions\": [{\"QuestionID\": \"QID561\", \"QuestionText\": \"Scenario: Cellphone You had the same phone for five years, and you think you need a new one. You have already searched the internet for which models appeal to you. In any case, you want a large screen so that everything is easy to read. Furthermore, the phones with a bad battery have already been filtered out. Because you sometimes drop your phone, you decide to take our insurance as well. All few options remain, all including insurance. You will make a choice from this. Below you will find all phones with corresponding prices and specifications from which you can choose. X-3A B-1000 Processor Speed: 2.0 Ghz Camera Settings: 2 Ease of Use: 8/10 Processor Speed: 2.8 Ghz Camera Settings: 4 Ease of Use: 9/10 Price: $599 Insurance Premium: $10/Month Price: $729 Insurance Premium: $13/Month\", \"QuestionType\": \"MC\", \"QuestionName\": \"Bin.Cell_TC\", \"Options\": [\"X-3A\", \"B-1000\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 1, \"SelectedText\": \"X-3A\"}}]}, {\"ElementType\": \"Block\", \"BlockName\": \"Comp.Printer\", \"BlockType\": \"Standard\", \"BlockID\": \"BL_damrqyTGO5KZSUS\", \"Questions\": [{\"QuestionID\": \"QID573\", \"QuestionText\": \"Scenario: Printer Because you regularly have to print documents for school, you are looking for a printer. You never bought a printer before, so you ask a friend for help. They helped you with your search and found a brand that seemed to meet your needs. On their advice, you go and see what this brand has to offer, and you find some printers that suit you. For you, additional to the price, the speed of the printer, ease of use, and qualities of the prints were important. Below you will find all printers with corresponding prices and specifications from which you can choose: 50B3 1000AX 240-C Speed: 6 pages per minute Storage: 90 Sheets Quality: Poor Speed: 9 pages per minute Storage: 150 Sheets Quality: Very Good Speed: 15 pages per minute Storage: 200 Sheets Quality: Excellent Price: $79 Price per page: $0.02 Price: $154 Price per page: $0.05 Price: $209 Price per page: $0.06\", \"QuestionType\": \"MC\", \"QuestionName\": \"Comp_Printer\", \"Options\": [\"50B3\", \"1000AX\", \"240-C\"], \"Settings\": {\"Selector\": \"SAHR\", \"SubSelector\": \"TX\", \"ForceResponse\": \"ON\"}, \"Answers\": {\"SelectedByPosition\": 2, \"SelectedText\": \"1000AX\"}}]}]}]}]}], \"EmbeddedData\": {}}"
+    }
+  ]
+}
