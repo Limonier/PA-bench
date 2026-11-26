@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "parent_manifest": "data/initial_eval_set_v1.json",
+  "parent_sha256": "f4855dee309a6162b017f0e7804de9bd589d09d6ff2fad09e716be7b5b1deaf4",
+  "seed": 20261122,
+  "lamp2": {
+    "sampling": "50 distinct users from frozen 200, seeded shuffle",
+    "ids": ["821012", "821016", "821032", "821058", "821111", "821140", "821150", "821174", "821194", "821216", "821241", "82127", "821296", "821307", "821313", "821378", "821383", "821399", "821416", "821550", "8217", "82180", "82182", "82223", "82287", "82292", "82294", "82395", "82434", "82448", "82541", "8255", "82581", "8262", "82667", "8269", "8271", "82731", "82739", "82745", "82749", "82782", "82852", "82869", "82891", "82897", "82922", "82928", "82954", "82999"]
+  },
+  "fingertip": {
+    "sampling": "20 unique users, one frozen zero-screenshot row per user",
+    "ids": ["suggestion:000009", "suggestion:000090", "suggestion:000303", "suggestion:000331", "suggestion:000375", "suggestion:000410", "suggestion:000573", "suggestion:000604", "suggestion:000606", "suggestion:000614", "suggestion:000738", "suggestion:000744", "suggestion:000761", "suggestion:000863", "suggestion:000878", "suggestion:000881", "suggestion:000909", "suggestion:000917", "suggestion:000922", "suggestion:000926"]
+  }
+}

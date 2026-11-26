@@ -1,0 +1,15 @@
+.venv/
+.retrieval-venv/
+.fingertip-venv/
+.mega-venv/
+.mega-tools-venv/
+.python/
+.cache/
+data/*
+!data/initial_eval_set_v1.json
+!data/memory_eval_subset_v1.json
+results/
+.env
+*.local.*
+__pycache__/
+upstream/

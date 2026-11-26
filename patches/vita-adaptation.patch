@@ -1,0 +1,146 @@
+diff --git a/src/vita/data_model/simulation.py b/src/vita/data_model/simulation.py
+index ee118a7..53121ce 100644
+--- a/src/vita/data_model/simulation.py
++++ b/src/vita/data_model/simulation.py
+@@ -400,7 +400,12 @@ class Results(BaseModel):
+         Save the results to a file.
+         """
+         with open(path, "w", encoding="utf-8") as f:
+-            f.write(self.model_dump_json(indent=4))
++            def redact(value):
++                if isinstance(value,dict):
++                    return {k:('[REDACTED]' if k.lower() in ('api_key','token','password','authorization') else redact(v)) for k,v in value.items()}
++                if isinstance(value,list): return [redact(v) for v in value]
++                return value
++            json.dump(redact(json.loads(self.model_dump_json())),f,ensure_ascii=False,indent=4)
+ 
+     def to_df(self) -> pd.DataFrame:
+         """
+diff --git a/src/vita/memory/full_context.py b/src/vita/memory/full_context.py
+index 24e9ff5..54aafdf 100644
+--- a/src/vita/memory/full_context.py
++++ b/src/vita/memory/full_context.py
+@@ -42,6 +42,9 @@ except Exception as _e:  # tiktoken missing, or cache not populated
+ 
+ # Fallback ratio when tiktoken is unavailable. cl100k averages ~2.5 chars/token
+ # for mixed Chinese text; 2 keeps us within budget.
++if _ENCODING is None and os.getenv("VITA_STRICT_MEMORY") == "1":
++    raise RuntimeError("Official cl100k_base tokenizer unavailable; refusing approximate memory budgets")
++
+ _CHARS_PER_TOKEN = 2
+ 
+ 
+diff --git a/src/vita/memory/rag_memory.py b/src/vita/memory/rag_memory.py
+index 090764e..547410a 100644
+--- a/src/vita/memory/rag_memory.py
++++ b/src/vita/memory/rag_memory.py
+@@ -57,6 +57,9 @@ try:
+ except Exception:
+     _ENCODING = None
+ 
++if _ENCODING is None and os.getenv("VITA_STRICT_MEMORY") == "1":
++    raise RuntimeError("Official cl100k_base tokenizer unavailable; refusing approximate memory budgets")
++
+ _CHARS_PER_TOKEN = 2  # fallback ratio when tiktoken is unavailable
+ 
+ 
+@@ -302,6 +305,7 @@ class RAGMemory(BaseMemory):
+         try:
+             return embed_texts([query], max_concurrency=1)[0]
+         except Exception as e:
++            if os.getenv("VITA_STRICT_MEMORY") == "1": raise
+             logger.warning(f"RAGMemory: query embedding failed ({e}); falling back to keyword search")
+             return None
+ 
+@@ -411,6 +415,7 @@ class RAGMemory(BaseMemory):
+         try:
+             new_embeddings = embed_texts(texts)
+         except Exception as e:
++            if os.getenv("VITA_STRICT_MEMORY") == "1": raise
+             logger.warning(f"RAGMemory: batch embedding failed ({e}); storing chunks without embeddings")
+             new_embeddings = [None] * len(texts)
+ 
+diff --git a/src/vita/memory/rewrite_memory.py b/src/vita/memory/rewrite_memory.py
+index 55095d7..1f4863d 100644
+--- a/src/vita/memory/rewrite_memory.py
++++ b/src/vita/memory/rewrite_memory.py
+@@ -8,6 +8,7 @@ On each update:
+ """
+ 
+ import json
++import os
+ from typing import Optional
+ 
+ from loguru import logger
+@@ -122,6 +123,7 @@ class RewriteMemory(BaseMemory):
+             if response is not None and response.content:
+                 self._memory_text = response.content.strip()
+             else:
++                if os.getenv("VITA_STRICT_MEMORY") == "1": raise RuntimeError("Empty rewrite response")
+                 logger.warning(
+                     "LLM returned empty/None response for memory update, falling back to append"
+                 )
+@@ -135,6 +137,7 @@ class RewriteMemory(BaseMemory):
+                         f"User preference observations:\n{interactions_text}"
+                     )
+         except Exception as e:
++            if os.getenv("VITA_STRICT_MEMORY") == "1": raise
+             logger.error(f"Error during LLM memory update: {e}. Falling back to append.")
+             if self._memory_text:
+                 self._memory_text = (
+diff --git a/src/vita/run.py b/src/vita/run.py
+index 6a83a2a..fa75e8b 100644
+--- a/src/vita/run.py
++++ b/src/vita/run.py
+@@ -1,3 +1,4 @@
++import os
+ import json
+ import multiprocessing
+ import random
+@@ -373,7 +374,7 @@ def run_tasks(
+                 save_to.parent.mkdir(parents=True, exist_ok=True)
+             logger.info(f"Saving simulation batch to {save_to}")
+             with open(save_to, "w") as fp:
+-                fp.write(simulation_results.model_dump_json(indent=2))
++                fp.write(simulation_results.model_dump_json(indent=2).replace(os.environ.get("SII_API_KEY", "__UNSET_SECRET__"), "[REDACTED]"))
+ 
+     def _save(simulation: SimulationRun):
+         def serialize_datetime(obj):
+@@ -390,7 +391,7 @@ def run_tasks(
+             
+             ckpt["simulations"].append(simulation_dict)
+             with open(save_to, "w", encoding="utf-8") as fp:
+-                json.dump(ckpt, fp, indent=2, ensure_ascii=False, default=serialize_datetime)
++                json.dump(json.loads(json.dumps(ckpt, default=serialize_datetime).replace(os.environ.get("SII_API_KEY", "__UNSET_SECRET__"), "[REDACTED]")), fp, indent=2, ensure_ascii=False)
+ 
+     def _run(task: Task, trial: int, seed: int, progress_str: str) -> dict:
+         ConsoleDisplay.console.print(
+diff --git a/src/vita/utils/llm_utils.py b/src/vita/utils/llm_utils.py
+index df9e92f..5f235af 100644
+--- a/src/vita/utils/llm_utils.py
++++ b/src/vita/utils/llm_utils.py
+@@ -196,13 +196,17 @@ def generate(
+         request["tools"] = [t.openai_schema for t in tools]
+         request["tool_choice"] = tool_choice or "auto"
+ 
+-    try:
+-        response = client.chat.completions.create(**request)
+-    except Exception as e:
+-        logger.error(f"[model={model}] {e}")
+-        raise
+-
+-    response_dict = response.model_dump()
++    if model == 'nex-n2.5-pro':
++        import sys
++        from pathlib import Path
++        sys.path.insert(0, str(Path(__file__).resolve().parents[5] / 'scripts'))
++        from nex_vita_transport import chat
++        response_dict = chat(request['messages'], tools=request.get('tools'),
++                             tool_choice=request.get('tool_choice'),
++                             temperature=request.get('temperature', 0),
++                             max_tokens=request.get('max_tokens', 16384))
++    else:
++        response_dict = client.chat.completions.create(**request).model_dump()
+     usage = get_response_usage(response_dict)
+     cost = get_response_cost(usage or {}, model)
+ 

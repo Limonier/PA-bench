@@ -1,0 +1,15 @@
+# Install into .deps using the existing Python 3.13 runtime. Torch and
+# sentence-transformers are provided by the existing FingerTip environment.
+qdrant-client==1.13.3
+posthog==3.25.0
+openai==1.109.1
+sqlalchemy>=2,<3
+spacy==3.8.14
+jsonschema==4.26.0
+nltk
+aiofiles
+rank-bm25==0.2.2
+pytz
+python-dateutil==2.9.0.post0
+# Install mem0ai==0.1.94 separately using --no-deps for package metadata.
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
